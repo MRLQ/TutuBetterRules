@@ -1,21 +1,7 @@
-# 本规则仅作为配置简化使用 // Direct_Necessary
-# 放在规则最前面 使用方法⬇️
-# # > Direct(Google|Proxy|Download)
+# > Direct
 # RULE-SET,https://raw.githubusercontent.com/bunizao/TutuBetterRules/tutu/RuleList/DOMAlN/Direct.list,DIRECT
 
-# > Google
-DOMAIN,mtalk.google.com
-DOMAIN,mobile-gtalk.l.google.com
-DOMAIN,alt1-mtalk.google.com
-DOMAIN,alt2-mtalk.google.com
-DOMAIN,alt3-mtalk.google.com
-DOMAIN,alt4-mtalk.google.com
-DOMAIN,alt5-mtalk.google.com
-DOMAIN,alt6-mtalk.google.com
-DOMAIN,alt7-mtalk.google.com
-DOMAIN,alt8-mtalk.google.com
-DOMAIN,alt9-mtalk.google.com
-DOMAIN-SUFFIX,mobile-gtalk.l.google.com
+
 # > Proxy
 PROCESS-NAME,v2ray
 PROCESS-NAME,ss-local
@@ -31,7 +17,11 @@ PROCESS-NAME,uTorrent
 PROCESS-NAME,qbittorrent
 PROCESS-NAME,WebTorrent
 PROCESS-NAME,WebTorrent Helper
-# > nexsub
-DOMAIN-SUFFIX,xvvrkb.lol
-# > qiniup
-DOMAIN-SUFFIX,qiniup.com
+# > LAN
+IP-CIDR,192.168.0.0/16,DIRECT
+IP-CIDR,10.0.0.0/8,DIRECT
+IP-CIDR,172.16.0.0/12,DIRECT
+IP-CIDR,127.0.0.0/8,DIRECT
+IP-CIDR,100.64.0.0/10,DIRECT
+IP-CIDR,224.0.0.0/4,DIRECT
+RULE-SET,LAN,DIRECT
