@@ -18,7 +18,7 @@ jobs:
       - name: Check out TutuBetterRules repository
         uses: actions/checkout@v2
         with:
-          repository: bunizao/TutuBetterRules
+          repository: MRLQ/TutuBetterRules
           ref: tutu
           token: ${{ secrets.GITHUB_TOKEN }}
 
