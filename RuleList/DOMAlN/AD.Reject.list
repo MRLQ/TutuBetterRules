@@ -178,6 +178,7 @@ DOMAIN,free-aos-cdn-image.amap.com
 DOMAIN-SUFFIX,v.smtcdns.com
 DOMAIN,gwp.xiaojukeji.com
 AND,((IP-ASN,45090,no-resolve),(DEST-PORT,25641),(PROTOCOL,TCP))
+AND,((IP-ASN,55990,no-resolve),(DEST-PORT,25641),(PROTOCOL,TCP))
 AND,((IP-ASN,63646,no-resolve),(DEST-PORT,25641),(PROTOCOL,TCP))
 AND,((PROTOCOL,QUIC),(DOMAIN-SUFFIX,xiaohongshu.com))
 DOMAIN-SUFFIX,uve.weibo.com
@@ -222,7 +223,6 @@ DOMAIN,th-a.pinduoduo.com
 DOMAIN,ta-a.pinduoduo.com
 DOMAIN,meta.pinduoduo.com
 DOMAIN,apm-a.pinduoduo.com
-DOMAIN,m.pinduoduo.net
 URL-REGEX,"^http:\/\/\w{32}\.jddebug\.com\/diagnose\?"
 DOMAIN,api.biliapi.com
 DOMAIN,app.biliapi.com
