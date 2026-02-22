@@ -1,5 +1,5 @@
 #!name=AD ByeBye+ 2.x
-#!desc=Most Optimized Ad-free Experience presented with automated updates. | 提供最优化无广告体验，自动同步更新。\nRepo: https://tuu.cat/repo・Update: 02/18/2026・Support: @bunizao・ Channel: @hututu00
+#!desc=Most Optimized Ad-free Experience presented with automated updates. | 提供最优化无广告体验，自动同步更新。\nRepo: https://tuu.cat/repo・Update: 02/21/2026・Support: @bunizao・ Channel: @hututu00
 #!include=Block HTTPDNS, AD Block, Zhihu, Amap, DiDi, REDnote, Weibo, Tieba, Cainiao, PinDuoDuo, JD, Bilibili, 12306, Eleme, Meituan, MiniProgram, Pixiv
 #!url=https://tuu.cat/ADBlock
 #!category=🚫 AD Block
@@ -20,13 +20,6 @@ RULE-SET,https://raw.githubusercontent.com/bunizao/TutuBetterRules/tutu/RuleList
 [URL Rewrite]
 
 # -------- Block HTTPDNS ---------
-^https?:\/\/203\.107\.1\.1/\d+/ss - reject
-^https?:\/\/203\.107\.1\.33/\d+/ss - reject
-^https?:\/\/203\.107\.1\.66/\d+/ss - reject
-^https?:\/\/203\.107\.1\.67/\d+/ss - reject
-^https?:\/\/203\.107\.1\.97/\d+/ss - reject
-^https?:\/\/2401:b180:2000:30::1c\/\d+\/d - reject
-^https?:\/\/2401:b180:2000:20::10\/\d+\/d - reject
 ^https?:\/\/cdn\.wup\.huya\.com\/monitor\/monitor\.jsp - reject
 ^https:\/\/gslbali\.ximalaya\.com\/linkeye-cloud\/httpdns\/ - reject
 
@@ -53,7 +46,6 @@ RULE-SET,https://raw.githubusercontent.com/bunizao/TutuBetterRules/tutu/RuleList
 
 # -------- Block HTTPDNS ---------
 ^https?:\/\/appconf\.mail\.163\.com\/mailmaster\/api\/http\/urlConfig\.do$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/amdc\.alipay\.com\/query data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/msglb\.91160\.com\/msg\/outer\/broker\/get$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/ucdc\d?-upaas\.uc\.cn\/api\/v\d\/dns_query\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
@@ -66,6 +58,7 @@ RULE-SET,https://raw.githubusercontent.com/bunizao/TutuBetterRules/tutu/RuleList
 ^https:\/\/api\.zhihu\.com\/me\/guides data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/api\.zhihu\.com\/people\/homepage_entry_v2 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/api\.zhihu\.com\/search\/(hot_search|preset_words) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/www\.zhihu\.com\/api\/v4\/search\/clicked_recommendation\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/www\.zhihu\.com\/api\/v4\/search\/related_queries\/(?:article|answer)\/\d+ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/api\.zhihu\.com\/comment_v5\/(?:articles|answers)\/\d+\/list-headers data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/api\.zhihu\.com\/prague\/related_suggestion_native\/feed\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
@@ -81,10 +74,13 @@ RULE-SET,https://raw.githubusercontent.com/bunizao/TutuBetterRules/tutu/RuleList
 ^https:\/\/zhuanlan\.zhihu\.com\/api\/articles\/\d+\/recommendation data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # ------------- Amap -------------
+^https:\/\/m5-zb\.amap\.com\/ws\/ride\/home\/page\/get_commuting_card\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/orderList\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-(?:car-end|route-plan) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_adv\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/ai\.amap\.com\/v1\/ai_rec\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/m5\.amap\.com\/ws\/aos\/main\/page\/product\/list\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(?:main-page-assets|main-page-location|ridewalk-end-fc|usr-profile-fc\/homeV2) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/m5\.amap\.com\/ws\/(?:mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
@@ -93,7 +89,6 @@ RULE-SET,https://raw.githubusercontent.com/bunizao/TutuBetterRules/tutu/RuleList
 ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:order\/car\/(?:feedback\/get_card_questions|feedback\/viptips|king_toolbox_car_bubble|remark\/satisfactionConf|rights_information)|tips\/onscene_visual_optimization) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:pay\/web\/paySuccess\/info\/request|transportation\/diversion\/resource\/driving) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/ai\.amap\.com\/v1\/ai_rec\/home_qs\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # ------------- DiDi -------------
 ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget data-type=text data="{}" status-code=200 header="Content-Type:application/json"
@@ -220,9 +215,9 @@ body_rewrite_34 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/search
 拦截服务器推送配置 config all = type=http-response, pattern=^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/zhihu\/config\/all\?, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/Zhihu_remove_ads.js, requires-body=true
 
 # ------------- Amap -------------
-body_rewrite_18 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\?, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-del%22%2C%5B%22data.commonMaterial%22%2C%22data.tipsOperationLocation%22%2C%22data.resourcePlacement%22%5D%5D%5D
-body_rewrite_19 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/homepage\?, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-del%22%2C%5B%22history_tags%22%5D%5D%5D
-body_rewrite_30 = type=http-response, pattern=^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_car_tips\?, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-del%22%2C%5B%22data.carTips.data.popupInfo%22%5D%5D%5D
+body_rewrite_20 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\?, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-del%22%2C%5B%22data.commonMaterial%22%2C%22data.tipsOperationLocation%22%2C%22data.resourcePlacement%22%5D%5D%5D
+body_rewrite_21 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/homepage\?, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-del%22%2C%5B%22history_tags%22%5D%5D%5D
+body_rewrite_33 = type=http-response, pattern=^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_car_tips\?, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-del%22%2C%5B%22data.carTips.data.popupInfo%22%5D%5D%5D
 移除路线规划推广 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/aos\/perception\/publicTravel\/beforeNavi\?, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/Amap_remove_ads.js, requires-body=true
 移除路线规划、导航结束页推广 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/bus\/plan\/integrate\?, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/Amap_remove_ads.js, requires-body=true
 移除导航详情页底部酒店、处理附近页 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/c3frontend\/(?:af-(?:hotel|launch)\/page\/main|af-nearby\/nearby), script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/Amap_remove_ads.js, requires-body=true
@@ -250,9 +245,9 @@ body_rewrite_20 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com
 body_rewrite_21 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/hint, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-replace%22%2C%5B%5B%22data.hint_words%22%2C%5B%5D%5D%5D%5D%5D
 body_rewrite_22 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/trending\?, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-replace%22%2C%5B%5B%22data.queries%22%2C%5B%5D%5D%2C%5B%22data.hint_word%22%2C%7B%7D%5D%5D%5D%5D
 移除图片和实况照片水印 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/note\/(?:imagefeed|live_photo\/save), script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/RedPaper_remove_ads.js, requires-body=true
-移除整体配置 ui = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system\/service\/ui\/config\?, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/RedPaper_remove_ads.js, requires-body=true
-移除开屏广告 config = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/RedPaper_remove_ads.js, requires-body=true
-移除开屏广告 splash_config = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/RedPaper_remove_ads.js, requires-body=true
+移除界面整体配置 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system\/service\/ui\/config\?, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/RedPaper_remove_ads.js, requires-body=true
+移除开屏广告 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/RedPaper_remove_ads.js, requires-body=true
+移除开屏广告 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/RedPaper_remove_ads.js, requires-body=true
 移除详情页小部件、关注页感兴趣的人 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/(?:note\/widgets|user\/followings\/followfeed), script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/RedPaper_remove_ads.js, requires-body=true
 移除信息流广告 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/followfeed\?, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/RedPaper_remove_ads.js, requires-body=true
 移除详情页感兴趣的人 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v5\/recommend\/user\/follow_recommend\?, script-path=https://github.com/bunizao/Mirrored/raw/main/Chores/js/RedPaper_remove_ads.js, requires-body=true
@@ -318,6 +313,6 @@ ProtoBuf处理 = type=http-response, pattern=^https:\/\/(grpc\.biliapi\.net|app\
 ########################################################################################
 
 [MITM]
-hostname = %APPEND% oauth.secure.pixiv.net, api.mcd.cn, orders.kfc.com.cn, dynamicad.kfc.com.cn, res.kfc.com.cn, res.pizzahut.com.cn, 3pp.starbucks.com.cn, htwkop.xiaojukeji.com, tm-api.pin-dao.cn, webchatapp.fcbox.com, dsp.fcbox.com, go.heytea.com, api.hellobike.com, ucmp.sf-express.com, 203.107.1.1, 203.107.1.33, 203.107.1.66, 203.107.1.67, 203.107.1.97, 2401:b180:2000:30::1c, 2401:b180:2000:20::10, amdc.alipay.com, appconf.mail.163.com, msglb.91160.com, ucdc2-upaas.uc.cn, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, api.zhihu.com, appcloud2.zhihu.com, link.zhihu.com, m-cloud.zhihu.com, page-info.zhihu.com, www.zhihu.com, zhuanlan.zhihu.com, *.amap.com, as.xiaojukeji.com, common.diditaxi.com.cn, conf.diditaxi.com.cn, lion.didialift.com, api.udache.com, ct.xiaojukeji.com, res.xiaojukeji.com, 112.53.55.225, 139.199.240.84, 113.46.225.*, 162.14.157.*, 123.207.209.*, 120.241.142.*, 120.241.143.*, 116.85.*, ci.xiaohongshu.com, edith.xiaohongshu.com, rec.xiaohongshu.com, so.xiaohongshu.com, www.xiaohongshu.com, *.weibo.cn, *.weibo.com, weibo.com, tiebac.baidu.com, tieba.baidu.com, netflow-mtop.cainiao.com, nbcps-mtop.cainiao.com, cn-acs.m.cainiao.com, e2e-mtop.cainiao.com, longquan-mtop.cainiao.com, api.pinduoduo.com, api.m.jd.com, grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, line3-h5-mobile-api.biligame.com, ad.12306.cn, mobile.12306.cn
+hostname = %APPEND% oauth.secure.pixiv.net, api.mcd.cn, orders.kfc.com.cn, dynamicad.kfc.com.cn, res.kfc.com.cn, res.pizzahut.com.cn, 3pp.starbucks.com.cn, htwkop.xiaojukeji.com, tm-api.pin-dao.cn, webchatapp.fcbox.com, dsp.fcbox.com, go.heytea.com, api.hellobike.com, ucmp.sf-express.com, appconf.mail.163.com, msglb.91160.com, ucdc2-upaas.uc.cn, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, *.zhihu.com, *.amap.com, as.xiaojukeji.com, common.diditaxi.com.cn, conf.diditaxi.com.cn, lion.didialift.com, api.udache.com, ct.xiaojukeji.com, res.xiaojukeji.com, 112.53.55.225, 139.199.240.84, 113.46.225.*, 162.14.157.*, 123.207.209.*, 120.241.142.*, 120.241.143.*, 116.85.*, ci.xiaohongshu.com, edith.xiaohongshu.com, rec.xiaohongshu.com, so.xiaohongshu.com, www.xiaohongshu.com, *.weibo.cn, *.weibo.com, weibo.com, tiebac.baidu.com, tieba.baidu.com, netflow-mtop.cainiao.com, nbcps-mtop.cainiao.com, cn-acs.m.cainiao.com, e2e-mtop.cainiao.com, longquan-mtop.cainiao.com, api.pinduoduo.com, api.m.jd.com, grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, line3-h5-mobile-api.biligame.com, ad.12306.cn, mobile.12306.cn
 h2 = true
 tcp-connection = true
