@@ -144,6 +144,7 @@ IP-CIDR,81.71.61.216/32,no-resolve
 DOMAIN,httpdns.immomo.com
 URL-REGEX,"^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?):\d+\/httpdns\/"
 URL-REGEX,"^http:\/\/\[[0-9a-fA-F:]+\]:\d+\/httpdns\/"
+DOMAIN,httpdns.zybang.com
 DOMAIN-KEYWORD,adstrategy
 AND,((DOMAIN-KEYWORD,tnc),(OR,((DOMAIN-SUFFIX,capcutapi.com),(DOMAIN-SUFFIX,zijieapi.com),(DOMAIN-SUFFIX,isnssdk.com),(DOMAIN-SUFFIX,toutiaoapi.com),(DOMAIN-SUFFIX,bytedance.com),(DOMAIN-SUFFIX,snssdk.com),(DOMAIN-SUFFIX,sgsnssdk.com))))
 AND,((DOMAIN-KEYWORD,-ad-),(DOMAIN-SUFFIX,byteimg.com))
@@ -166,6 +167,7 @@ DOMAIN-KEYWORD,iflyad.bj.openstorage.cn
 DOMAIN-KEYWORD,bjimp.voiceads.cn
 DOMAIN-SUFFIX,1rtb.net
 DOMAIN-SUFFIX,1rtb.com
+DOMAIN-SUFFIX,yfanads.com
 DOMAIN-SUFFIX,halomobi.com
 DOMAIN-SUFFIX,hubcloud.com.cn
 DOMAIN-SUFFIX,inmobi.cn
@@ -218,8 +220,13 @@ DOMAIN,nadvideo2.baidu.com
 DOMAIN,wn.pos.baidu.com
 DOMAIN,miniapp-ad.cdn.bcebos.com
 DOMAIN,mobads-pre-config.cdn.bcebos.com
+DOMAIN,hm.baidu.com
+DOMAIN,api.map.baidu.com
+DOMAIN,dlswbr.baidu.com
+DOMAIN,miao.baidu.com
 DOMAIN-SUFFIX,union.baidu.cn
 DOMAIN-SUFFIX,union.baidu.com
+DOMAIN,tdid.m.qq.com
 DOMAIN,adsmind.gdtimg.com
 DOMAIN,adsmind.ugdtimg.com
 DOMAIN,ads.privacy.qq.com
@@ -337,6 +344,7 @@ DOMAIN,logrcv.aiclk.com
 DOMAIN,acjs.aliyun.com
 DOMAIN,retcode.alicdn.com
 DOMAIN,arms-retcode.aliyuncs.com
+DOMAIN-SUFFIX,iytcdn.com
 DOMAIN,huichuan.sm.cn
 DOMAIN,huichuan-mc.sm.cn
 DOMAIN,api.sm.cn
@@ -437,6 +445,7 @@ DOMAIN-SUFFIX,adshenshi.com
 DOMAIN-SUFFIX,qidianad.com
 DOMAIN-SUFFIX,kuaichuanad.com
 DOMAIN-SUFFIX,statisticslinks.com
+DOMAIN,adx.zuoyebang.com
 DOMAIN-SUFFIX,tradplusad.com
 DOMAIN-SUFFIX,fancyapi.com
 DOMAIN-SUFFIX,medproad.com
@@ -463,6 +472,8 @@ DOMAIN-SUFFIX,skarb.work
 DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,fivecdm.com
 DOMAIN-SUFFIX,doubleverify.com
+DOMAIN-SUFFIX,tobidad.cn
+DOMAIN-SUFFIX,tobidad.com
 DOMAIN,ep7.facebook.com
 DOMAIN,amap-aos-info-nogw.amap.com
 DOMAIN,free-aos-cdn-image.amap.com
